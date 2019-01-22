@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo setting serverless framework config
+      - cd lambda
+      - serverless config credentials -o --provider aws --key $AWS_ID --secret $AWS_SECRET
+      - sls plugin install -n serverless-python-requirements
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo deploy with sls
+      - sls deploy
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo execute with sls
+      - sls invoke -f $FUNCTION
