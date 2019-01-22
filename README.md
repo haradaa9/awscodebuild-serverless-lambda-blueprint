@@ -3,9 +3,14 @@
 ### How to use it
 
 1. build serverless framework environment with AWS Codebuild.
+
 https://github.com/haradaa9/sls_codebuild_docker
+
 2. clone this repository and modify your code.
+
 3. make AWS Codebuild project and build it.
+
+https://github.com/haradaa9/awscodebuild-serverless-lambda-blueprint/blob/master/screencapture-ap-northeast-1-console-aws-amazon-codesuite-codebuild-project-new-2019-01-22-20_50_01.png
 
 ### File Structure
 ```
